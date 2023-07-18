@@ -20,7 +20,6 @@ const returnArrLetters = (arrWords) => {
 };
 
 const searchUniqueLetter = (letters) => {
-
   const uniqCh = letters.filter((ch, i, arr) => arr.indexOf(ch) === i);
   const repitCh = letters.filter((ch, i, arr) => arr.indexOf(ch) !== i);
 
