@@ -5,14 +5,8 @@ const returnArrLetters = (arrWords) => {
   const arrLetter = [];
 
   for (const word of arrWords) {
-
-    const uniqCh = [...word].filter((ch, i, arr) => {
-      return arr.indexOf(ch) === i;
-    });
-
-    const repitCh = [...word].filter((ch, i, arr) => {
-      return arr.indexOf(ch) !== i;
-    });
+    const uniqCh = [...word].filter((ch, i, arr) => arr.indexOf(ch) === i);
+    const repitCh = [...word].filter((ch, i, arr) => arr.indexOf(ch) !== i);
 
     for (const ch of uniqCh) {
       if (!repitCh.includes(ch)) {
@@ -26,13 +20,9 @@ const returnArrLetters = (arrWords) => {
 };
 
 const searchUniqueLetter = (letters) => {
-  const uniqCh = letters.filter((ch, i, arr) => {
-    return arr.indexOf(ch) === i;
-  });
 
-  const repitCh = letters.filter((ch, i, arr) => {
-    return arr.indexOf(ch) !== i;
-  });
+  const uniqCh = letters.filter((ch, i, arr) => arr.indexOf(ch) === i);
+  const repitCh = letters.filter((ch, i, arr) => arr.indexOf(ch) !== i);
 
   for (const ch of uniqCh) {
     if (!repitCh.includes(ch)) {
